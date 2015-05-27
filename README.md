@@ -2,12 +2,15 @@
 Abuse the link cable to transfer and execute code in your pokemon blue/red(/yellow?) on gameboy classic.
 
 (Sorry for the state of everything, contact me for any and all questions - thought it would be better to put it on github than leaving it offline)
+
 Some tools I used to connect my computer & pokemon on gameboy color.
+
 All tools take a single argument "bp" or "no" - bp = connect through buspirate, no = use bgb emulator link
-Helps creating the F8 code execution item and use the link cable to transfer
-code to execute.
+
+Helps creating the F8 code execution item and use the link cable to transfer code to execute.
 
 Can create F8 if you have an old rod/good rod and a couple of worthless pokemons.
+
 With the F8 we can execute code located in our pokemon, tentacool with serial recv and execute code included.
 
 (Attempt to create F8 by overwriting the box-pokemon counter - has some issues with stack overflows - 
@@ -29,4 +32,5 @@ Gameboy can act as Master/Slave (Master sends clock signals)
 
 Thanks to:
 Disassembly of Pokémon red: https://github.com/iimarckus/pokered
+
 Arbitrary code execution with F8 item: http://forums.glitchcity.info/index.php/topic,6638.0.html
