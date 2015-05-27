@@ -5,6 +5,8 @@ Abuse the link cable to transfer and execute code in your pokemon blue/red(/yell
 
 Some tools I used to connect my computer & pokemon on gameboy color.
 
+Allows connecting BGB emulator to actual gameboy color
+
 All tools take a single argument "bp" or "no" - bp = connect through buspirate, no = use bgb emulator link
 
 Helps creating the 8F code execution item and use the link cable to transfer code to execute.
@@ -20,11 +22,17 @@ Used buspirate to communicate, a raspberry pi could probably be used if
 a voltage drop for gameboy output pin is added.
 
 Link cable http://www.hardwarebook.info/Game_Boy_Link
+
 Buspirate linking
+
 SI - MOSI
+
 SO - MISO
+
 CLK - SC
+
 GND -GND
+
 Gameboy can act as Master/Slave (Master sends clock signals)
 
 
