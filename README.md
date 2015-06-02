@@ -6,7 +6,7 @@ Note that, to ensure that you don't break your Raspberry Pi, a 10kOhm resistor
 is recommended at the MISO pin (GB uses 5v output)
 Note that you should always use the Rpi as master, otherwise you may want to
 add a 10kOhm resistor to SCLK too (Always run script before talking to pokecenter lady).
-(I have been using this without any resistors, and my raspi isn't broke yet...)
+(I have been using this without any resistors, and my raspi isn't broken yet...)
 
      ___________
     |  6  4  2  |
