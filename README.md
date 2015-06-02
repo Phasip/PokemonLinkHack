@@ -7,6 +7,7 @@ is recommended at the MISO pin (GB uses 5v output)
 Note that you should always use the Rpi as master, otherwise you may want to
 add a 10kOhm resistor to SCLK too (Always run script before talking to pokecenter lady).
 (I have been using this without any resistors, and my raspi isn't broke yet...)
+
      ___________
     |  6  4  2  |
      \_5__3__1_/   (at cable)
@@ -58,7 +59,7 @@ Programs must start with the byte sequence "START" and end with the byte
 sequence "END" to make extraction with getbytes.py simple.
 
 ##7A item
-The 7A item is a item similar to [F8](http://forums.glitchcity.info/index.php/topic,6638.0.html), except execution starts inside
+The 7A item is a item similar to [8F](http://forums.glitchcity.info/index.php/topic,6638.0.html), except execution starts inside
 the original trainer name of the current daycare pokemon. (DA58).
 gb_install_program uses the OT name to jump to the first box pokemon - which 
 is made to contain code that lists the boxed pokemons and execute code that they
