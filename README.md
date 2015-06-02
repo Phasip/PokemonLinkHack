@@ -6,7 +6,7 @@ Note that, to ensure that you don't break your Raspberry Pi, a 10kOhm resistor
 is recommended at the MISO pin (GB uses 5v output)
 Note that you should always use the Rpi as master, otherwise you may want to
 add a 10kOhm resistor to SCLK too (Always run script before talking to pokecenter lady).
-
+(I have been using this without any resistors, and my raspi isn't broke yet...)
      ___________
     |  6  4  2  |
      \_5__3__1_/   (at cable)
@@ -47,7 +47,7 @@ Then save the game by changing box.
 ##getbytes.py
 Compiles a .asm file and tries to extract the relevant bytes from the result.
 These bytes can be used with modules/gbexploit.py or gb_install_programs.py
-Uses symbol files that are generated when compiling [pokered](https://github.com/iimarckus/pokered)pokered.
+Uses symbol files that are generated when compiling [pokered](https://github.com/iimarckus/pokered).
 (you need to modify ASMLOC to match your location of pokered)
 ##modules/
 Parts that can be used to do stuff with pokemon/gameboy/spi
