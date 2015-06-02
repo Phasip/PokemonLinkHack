@@ -1,10 +1,7 @@
 #!/usr/bin/python
 import sys,time,serial,binascii
 #Raw 3wire mode for buspirate
-#will try to adapt for raspberry pi when I get hold of one that I can use.
-
 bp = None
-
 def sendByte(byte,verify=False):
     bp.write(bytes((byte,)))
     if verify:

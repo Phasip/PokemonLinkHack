@@ -47,6 +47,11 @@ Level_2 = 45,
 Max_HP=255,
 Defense=779)
 
+def make_pkmn(data):
+    if len(data) == 33:
+        data = data + b"\x00"*11
+    return Pokemon._make(unpack(pkmn_format,data))
+
 #Replace some bytes in a pokemon byte representation
 def modify_pkmn_bytes(pokemon,index,data):
     global pkmn_format,Pokemon

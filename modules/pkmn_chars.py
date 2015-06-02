@@ -87,29 +87,21 @@ hex_to_char = {0x4F: "=",
 0xFE: "8",
 0xFF: "9"}
 char_to_hex = dict([v,k] for k,v in hex_to_char.items())
-def sendString(text,length):
+
+def string_to_gb(text,length = -1):
     ret = b""
-    if len(text) >= length:
+    if length != -1 and len(text) >= length:
         print("Text too long!")
         sys.exit(1)
         
-    for i in text:
-        if not (i in pkmn_chars.char_to_hex):
-            print("Illegal pokemon char: " + i)
-            sys.exit(1)
-        
-        ret = ret +  bytes((pkmn_chars.char_to_hex[i],))
-    ret = ret + b"\x50"*(length-len(ret)) #String end and fill
-    return ret
-
-def string_to_gb(text):
-    global char_to_hex
-    ret = b""
     for i in text:
         if not (i in char_to_hex):
             print("Illegal pokemon char: " + i)
             sys.exit(1)
         ret = ret + bytes((char_to_hex[i],))
+    
+    if length != -1:
+        ret = ret + b"\x50"*(length-len(ret)) #String end and fill
     return ret
               
 def gb_to_string(data):
