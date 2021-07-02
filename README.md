@@ -26,7 +26,7 @@ Abuse the link cable to transfer and execute code in your pokemon blue/red(/yell
 This is a bit unstable - you may need to restart your device to get a transfer working.
 Note that the code is made for python3
 
-##Backends
+## Backends
 All scripts take a single argument. This argument specifies which backend to use
 
 'pi' = Raspberry Pi SPI port
@@ -34,9 +34,9 @@ All scripts take a single argument. This argument specifies which backend to use
 'bp' = Buspirate SPI
 
 'no' = BGB emulator link
-##gb_hmslave.py 
+## gb_hmslave.py 
 Simply trade a hm-slave Mew to your gameboy.
-##gb_install_programs.py
+## gb_install_programs.py
 Uses the exploit described by [vaguilar](http://vaguilar.js.org/posts/1/) to add program pokemons
 to your current box. Your box must be empty, you need to have less than 20 items 
 and the trainer name of any pokemon in daycare will be changed.
@@ -45,20 +45,20 @@ allows you to run "program pokemons" that are installed in your boxes.
 
 After the exploit has run, abort the trade and walk around til your pokemons die.
 Then save the game by changing box.
-##getbytes.py
+## getbytes.py
 Compiles a .asm file and tries to extract the relevant bytes from the result.
 These bytes can be used with modules/gbexploit.py or gb_install_programs.py
 Uses symbol files that are generated when compiling [pokered](https://github.com/iimarckus/pokered).
 (you need to modify ASMLOC to match your location of pokered)
-##modules/
+## modules/
 Parts that can be used to do stuff with pokemon/gameboy/spi
-##programs/
+## programs/
 Assembly code of some programs that can be used with this stuff.
 Programs include red/main.asm to get access to non-global labels.
 Programs must start with the byte sequence "START" and end with the byte
 sequence "END" to make extraction with getbytes.py simple.
 
-##7A item
+## 7A item
 The 7A item is a item similar to [8F](http://forums.glitchcity.info/index.php/topic,6638.0.html), except execution starts inside
 the original trainer name of the current daycare pokemon. (DA58).
 gb_install_program uses the OT name to jump to the first box pokemon - which 
