@@ -37,7 +37,7 @@ All scripts take a single argument. This argument specifies which backend to use
 ## gb_hmslave.py 
 Simply trade a hm-slave Mew to your gameboy.
 ## gb_install_programs.py
-Uses the exploit described by [vaguilar](http://vaguilar.js.org/posts/1/) to add program pokemons
+Uses the exploit described by [vaguilar](http://web.archive.org/web/20180508011842/http://vaguilar.js.org/posts/1/) to add program pokemons
 to your current box. Your box must be empty, you need to have less than 20 items 
 and the trainer name of any pokemon in daycare will be changed.
 This gives you the 0x7A item (Name is weird characters) which 
