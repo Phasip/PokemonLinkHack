@@ -16,6 +16,7 @@ Now you can reset your game, load the save and use the 0x7a item!
 
 ![Trading, just cancel](/images/3.png)  
 *Trading, just cancel*  
+*At this point, the exploit has already run and the players inventory has already been changed*
 
 ![Die by walking around](/images/4.png)  
 *Die by walking around*
