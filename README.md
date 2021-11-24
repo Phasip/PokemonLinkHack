@@ -1,6 +1,33 @@
 PokemonLinkHack
 ===========================
+This repo is a bunch of tools used to abuse the link-cable buffer overflow vulnerability in the
+Pokemon Red (Gen1). The main script to use is gb_install_programs which first exploits the vulnerability to run code that allows us to read and write arbitrary memory addresses over the link cable. This is then used to add the 0x7A item to the players inventory. "Use" on 0x7A executes data within the Original-Trainer Name of the current pokemon in daycare. We overwrite this with code that jumps to the data stored in the first pokemon storage box.
+Instead of placing a real pokemon in the storage box, we place a program which lists other programs in subsequent boxes, and allows the user to run these.
 
+Finally, to be able to save the state the script poisons all your pokemons. You walk around till all your mons die, then go to the box storage system and change box in order to save.
+
+Now you can reset your game, load the save and use the 0x7a item!
+## Images
+![Prepping](/images/1.png)
+*Prepping*
+![Start Trade](/images/2.png)
+*Start trade*
+![Trading, just cancel](/images/3.png)
+*Trading, just cancel*
+![Die by walking around](/images/4.png)
+*Die by walking around*
+![Save by changing box](/images/5.png)
+*Save by changing box*
+![Save by changing box, then reset the game](/images/6.png)
+*Save by changing box, then reset the game*
+![Use item 0x7A](/images/7.png)
+*Use item 0x7a*
+![Use program FillDex](/images/8.png)
+*Use program FillDex*
+![Pokedex has been filled](/images/9.png)
+*Pokedex has been filled*
+![Looking at stored mons in boxes](/images/10.png)
+*Looking at stored mons in boxes*
 ## Pins
 Note that, to ensure that you don't break your Raspberry Pi, a 10kOhm resistor
 is recommended at the MISO pin (GB uses 5v output)
