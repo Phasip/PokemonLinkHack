@@ -72,6 +72,7 @@ addBoxData('HAX','GetItem',binascii.unhexlify(b'18000000AF3D2197CF77CD572D2196CF
 addBoxData('HAX','FillDex',binascii.unhexlify(b'180000000E2621F7D23EFF220D20FC2B367F2109D3367FC9000000000000000000'))
 # writedata(0xd12b,b'\x00') # set wLinkState to 0 in order to use items ... Does not work for some reason..
 addItem(0x7A,1)
+# Poison the Pokémons so we can exit and save through the box!
 poisonMons()
 #Don't do this... saves you in the center and you can't leave.
 #b = readdata(0xd72e,1) 
