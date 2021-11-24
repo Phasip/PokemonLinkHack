@@ -29,7 +29,7 @@ def init(backend):
     
 
 
-def sendGb(data,wait = 0.005,resend = True):
+def sendGb(data,wait = 0.005,resend = True, echo=True):
     ret = b''
     for i in data:
         val = sendDataByte(i)
@@ -38,15 +38,21 @@ def sendGb(data,wait = 0.005,resend = True):
             val = sendDataByte(i)
             time.sleep(wait)
         ret = ret + bytes((val,))
-        
-    print("Sent: " + str(binascii.hexlify(data)))
-    print("Recv: " + str(binascii.hexlify(ret)))
+    
+    if echo:
+        print("Sent: " + str(binascii.hexlify(data)))
+        print("Recv: " + str(binascii.hexlify(ret)))
+    
     return ret
 
 def sendUntil(data,waitfor,wait = 0.02):
     retval = None
+    print("Sending: %s, until: %s"%(str(binascii.hexlify(data)),str(binascii.hexlify(waitfor))))
+    print("Recv: [",end="")
     while retval != waitfor:
-        retval = sendGb(data,wait)
+        retval = sendGb(data,wait,echo=False)
+        print("%s,"%str(binascii.hexlify(retval)),end="")
+    print("], Done!")
     return retval
 
 def sendUntilrecvdSequence(send,waitfor):
