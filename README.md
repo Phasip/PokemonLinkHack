@@ -8,26 +8,36 @@ Finally, to be able to save the state the script poisons all your pokemons. You 
 
 Now you can reset your game, load the save and use the 0x7a item!
 ## Images
-![Prepping](/images/1.png)
+![Prepping](/images/1.png)  
 *Prepping*
-![Start Trade](/images/2.png)
+
+![Start Trade](/images/2.png)  
 *Start trade*
-![Trading, just cancel](/images/3.png)
-*Trading, just cancel*
-![Die by walking around](/images/4.png)
+
+![Trading, just cancel](/images/3.png)  
+*Trading, just cancel*  
+
+![Die by walking around](/images/4.png)  
 *Die by walking around*
-![Save by changing box](/images/5.png)
+
+![Save by changing box](/images/5.png)  
 *Save by changing box*
-![Save by changing box, then reset the game](/images/6.png)
+
+![Save by changing box, then reset the game](/images/6.png)  
 *Save by changing box, then reset the game*
-![Use item 0x7A](/images/7.png)
+
+![Use item 0x7A](/images/7.png)  
 *Use item 0x7a*
-![Use program FillDex](/images/8.png)
+
+![Use program FillDex](/images/8.png)  
 *Use program FillDex*
-![Pokedex has been filled](/images/9.png)
+
+![Pokedex has been filled](/images/9.png)  
 *Pokedex has been filled*
-![Looking at stored mons in boxes](/images/10.png)
+
+![Looking at stored mons in boxes](/images/10.png)  
 *Looking at stored mons in boxes*
+
 ## Pins
 Note that, to ensure that you don't break your Raspberry Pi, a 10kOhm resistor
 is recommended at the MISO pin (GB uses 5v output)
