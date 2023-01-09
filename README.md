@@ -1,5 +1,7 @@
 PokemonLinkHack
 ===========================
+I wrote a short blog post that introduces this, please see https://www.sn1.se/posts/pokemon/
+
 This repo is a bunch of tools used to abuse the link-cable buffer overflow vulnerability in the
 Pokemon Red (Gen1). The main script to use is gb_install_programs which first exploits the vulnerability to run code that allows us to read and write arbitrary memory addresses over the link cable. This is then used to add the 0x7A item to the players inventory. "Use" on 0x7A executes data within the Original-Trainer Name of the current pokemon in daycare. We overwrite this with code that jumps to the data stored in the first pokemon storage box.
 Instead of placing a real pokemon in the storage box, we place a program which lists other programs in subsequent boxes, and allows the user to run these.
